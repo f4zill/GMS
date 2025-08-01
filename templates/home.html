@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gym Management System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Unica+One&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --purple: #9a63ff;
+      --deep-purple: #1f0030;
+      --glass: rgba(255, 255, 255, 0.05);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Unica One', cursive;
+      background: radial-gradient(circle at center, #1f0030 0%, #0a0a0a 100%);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    .hero {
+      position: relative;
+      height: 100vh;
+      background: url('/mnt/data/c2b519b6-be73-4656-9afa-e482d02cf733.png') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 60%, transparent);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      padding: 40px;
+    }
+
+    .hero-content h1 {
+      font-size: 3.5rem;
+      color: #fff;
+      text-shadow: 0 0 15px var(--purple);
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      color: #ccc;
+      margin-bottom: 40px;
+    }
+
+    .button-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .btn {
+      background: linear-gradient(135deg, #7b42f6, #b01eff);
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(155, 109, 255, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      background: linear-gradient(135deg, #d86fff, #7b42f6);
+      box-shadow: 0 0 30px #c684ff, 0 0 60px #9e6eff;
+    }
+
+    .glass-card {
+      background: var(--glass);
+      backdrop-filter: blur(12px);
+      border-radius: 16px;
+      padding: 30px;
+      margin-top: 60px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 30px rgba(155, 109, 255, 0.2);
+    }
+
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 2.2rem;
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+
+      .button-grid {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Welcome to<br>Gym Management System</h1>
+      <p>Track your members, trainers, equipment, payments, and workout logs in a stunning anime interface.</p>
+
+      <div class="button-grid">
+        <a href="/members"><button class="btn">Add Member</button></a>
+        <a href="/trainers"><button class="btn">Add Trainer</button></a>
+        <a href="/equipment"><button class="btn">Add Equipment</button></a>
+        <a href="/workout_logs"><button class="btn">Add Workout Log</button></a>
+        <a href="/payments"><button class="btn">Add Payment</button></a>
+      </div>
+
+      <div class="glass-card">
+        <p style="font-size: 0.95rem; color: #ccc;">
+          “Strength doesn't come from what you can do. It comes from overcoming the things you once thought you couldn’t.”<br>
+          ~ Start managing your gym with confidence!
+        </p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
