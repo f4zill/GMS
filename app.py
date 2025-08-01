@@ -1,18 +1,18 @@
 from flask import Flask, render_template, request, redirect, url_for
 from bson.objectid import ObjectId
 from datetime import datetime
+from dotenv import load_dotenv
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 import os
 
+load_dotenv()
+
 app = Flask(__name__)
 
-# ------------------ MongoDB Atlas Connection ------------------ #
-# It's better to load this from an environment variable
-MONGO_URI = os.getenv("MONGO_URI", "mongodb+srv://demperor523:Karasuno#10@cluster02.3pmcfzi.mongodb.net/gym_management?retryWrites=true&w=majority&appName=Cluster02")
-
-client = MongoClient(MONGO_URI, server_api=ServerApi('1'))
-
+uri = os.getenv("MONGO_URI")
+client = MongoClient(uri)
+db = client['gym_management']
 try:
     client.admin.command('ping')
     print("✅ Connected to MongoDB Atlas successfully.")
