@@ -10,8 +10,8 @@ load_dotenv()
 
 app = Flask(__name__)
 
-uri = os.getenv("MONGO_URI")
-client = MongoClient(uri)
+MONGO_URI = os.environ.get('MONGO_URI')
+client = MongoClient(MONGO_URI)
 db = client['gym_management']
 try:
     client.admin.command('ping')
