@@ -1,0 +1,31 @@
+# Environment
+.env
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Packaging
+build/
+dist/
+*.egg-info/
+
+# IDE and editor settings
+.vscode/
+
+# Virtual environments
+venv/
+.venv/
+ENV/
+env/
+
+# OS files
+.DS_Store
+
+# Logs and databases
+*.log
+*.sqlite3
+
+# Render deployment config
+render.yaml
